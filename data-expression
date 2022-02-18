@@ -1,0 +1,96 @@
+function calculateStatistics(flayer,field) {
+    var m = Mean(flayer,field)
+    var s = Stdev(flayer,field)
+    var v = Variance(flayer,field)
+    var r = s / m * 100  // Coefficient of Variation
+    Console("Variance is: " + v + " with mean of: " + m + " and SD of:" + s)
+    var z = 0
+    var prev = 1
+    var p = 0
+    for (var feature in flayer) {
+        z = (feature[field] - m) / s
+        p = (feature[field] - prev) / prev * 100
+        Console(feature[field] + " percent change: " + p + " with z-score of: " + z)
+        prev = feature[field]
+    }
+    var stats = [m,s,v,p,z,r]
+    return stats
+}
+
+// Create a FeatureSet from the Feature Layer containing the Data
+var portal = Portal('PORTAL URL'); // change to your portal URL
+var fs = FeatureSetByPortalItem(
+    portal,
+    'ITEM ID', // This is your ITEM ID, the long number and character string
+    0,
+    [
+        'LawDistrict',
+        'WeekNumber'
+    ],
+    false
+);
+
+var districtTotals = Filter(GroupBy(fs, ['LawDistrict'], [ { name: 'districtCount', expression: '1', statistic: 'COUNT' } ]), "LawDistrict in ('Y1','Y2','Y3')")
+var Y1stats = Filter(GroupBy(fs, ['LawDistrict','WeekNumber'], [ { name: 'weekCount', expression: '1', statistic: 'COUNT' } ]), "LawDistrict = 'Y1'")
+var Y2stats = Filter(GroupBy(fs, ['LawDistrict','WeekNumber'], [ { name: 'weekCount', expression: '1', statistic: 'COUNT' } ]), "LawDistrict = 'Y2'")
+var Y3stats = Filter(GroupBy(fs, ['LawDistrict','WeekNumber'], [{ name: 'weekCount', expression: '1', statistic: 'COUNT' }]), "LawDistrict = 'Y3'")
+
+var districtDict = { 
+  'fields': [{ 'name': 'DistrictNumber', 'type': 'esriFieldTypeString'},
+  {'name': 'DistrictName', 'type': 'esriFieldTypeString'}, 
+  {'name': 'DistrictTotal', 'type': 'esriFieldTypeInteger'}, 
+  {'name': 'DistrictMean', 'type': 'esriFieldTypeDouble'}, 
+  {'name': 'DistrictSD', 'type': 'esriFieldTypeDouble'}, 
+  {'name': 'DistrictVariance', 'type': 'esriFieldTypeDouble'}, 
+  {'name': 'DistrictZscore', 'type': 'esriFieldTypeDouble'}, 
+  {'name': 'PercentChange', 'type': 'esriFieldTypeDouble'}, 
+  {'name': 'CVRate', 'type': 'esriFieldTypeDouble'}], 
+  'geometryType': '', 
+  'features': [] 
+};
+
+var index = 0; 
+
+for (var feature in districtTotals) { 
+    districtDict.features[index] = { 
+        'attributes': { 
+            'DistrictNumber': feature['LawDistrict'], 
+            'DistrictName': 'District ' + feature['LawDistrict'], 
+            'DistrictTotal': feature['districtCount'],
+            'DistrictMean': feature['districtCount'] / 6
+        }} 
+    index++;}
+    
+// calculate district 1 stats
+var att = districtDict.features[0].attributes
+var stats = calculateStatistics(Y1stats,'weekCount')
+att.DistrictMean = stats[0]
+att.DistrictSD = stats[1]
+att.DistrictVariance = stats[2]
+att.PercentChange = stats[3]
+att.DistrictZscore = stats[4]
+att.CVRate = stats[5]
+    
+// calculate district 2 stats
+var att = districtDict.features[1].attributes
+var stats = calculateStatistics(Y2stats,'weekCount')
+att.DistrictMean = stats[0]
+att.DistrictSD = stats[1]
+att.DistrictVariance = stats[2]
+att.PercentChange = stats[3]
+att.DistrictZscore = stats[4]
+att.CVRate = stats[5]
+    
+// calculate district 3 stats
+var att = districtDict.features[2].attributes
+var stats = calculateStatistics(Y3stats,'weekCount')
+att.DistrictMean = stats[0]
+att.DistrictSD = stats[1]
+att.DistrictVariance = stats[2]
+att.PercentChange = stats[3]
+att.DistrictZscore = stats[4]
+att.CVRate = stats[5]
+
+var fs_dict = FeatureSet(Text(districtDict));
+
+return fs_dict
