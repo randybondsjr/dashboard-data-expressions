@@ -1,0 +1,101 @@
+<div style="background-color: #ddd; margin-bottom: 10px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: center; align-content: start;">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; font-size: 3rem; padding: 5px 0 0 15px;">200</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 5; font-size: 2rem; padding: 5px;">Title of items</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Change</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Range</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Trend</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">0%</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">Normal</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">Consistent</div>
+  </div>
+</div>
+
+<div style="background-color: #ddd; margin-bottom: 10px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: center; align-content: start;">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; font-size: 3rem; padding: 5px 0 0 15px;">200</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 5; font-size: 2rem; padding: 5px;">Title of items</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Change</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #d4423c; color:#fff">Range</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Trend</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">0%</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #d8827d; color:#fff">Above Normal</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">Consistent</div>
+  </div>
+</div>
+
+<div style="background-color: #ddd; margin-bottom: 10px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: center; align-content: start;">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; font-size: 3rem; padding: 5px 0 0 15px;">200</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 5; font-size: 2rem; padding: 5px;">Title of items</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Change</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #3fa255; color:#fff">Range</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Trend</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">0%</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #83c596; color:#fff">Below Normal</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">Consistent</div>
+  </div>
+</div>
+
+<div style="background-color: #ddd; margin-bottom: 10px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: center; align-content: start;">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; font-size: 3rem; padding: 5px 0 0 15px;">200</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 5; font-size: 2rem; padding: 5px;">Title of items</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Change</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Range</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #d4423c; color:#fff">Trend</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">0%</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">Normal</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #d8827d; color:#fff">Increasing</div>
+  </div>
+</div>
+
+<div style="background-color: #ddd; margin-bottom: 10px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: center; align-content: start;">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; font-size: 3rem; padding: 5px 0 0 15px;">200</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 5; font-size: 2rem; padding: 5px;">Title of items</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Change</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #777; color:#fff">Range</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #3fa255; color:#fff">Trend</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">0%</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #ccc; color:#fff">Normal</div>
+    <div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: #83c596; color:#fff">Decreasing</div>
+  </div>
+</div>
+<!-- 
+
+WHAT CHANGES?
+
+#### Red (increase or above normal) ### 
+heading -- background-color: #d4423c;
+content -- background-color: #d8827d;
+
+#### Green (decrease or below normal) ### 
+heading -- background-color: #3fa255;
+content -- background-color: #83c596;
+
+#### Default ### 
+heading -- background-color: #777;
+content -- background-color: #ccc;
+
+--!>
