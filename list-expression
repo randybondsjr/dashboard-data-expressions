@@ -1,0 +1,58 @@
+function createDistrictStats() {
+	var HTML = '<div style="background-color: #111; margin-bottom: 0px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">'
+	HTML += '<div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: center; align-content: start;">'
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; font-size: 1.5rem; padding: 3px 0 0 6px;">' + $datapoint.DistrictTotal + '</div>'
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 5; font-size: 1.5rem; padding: 3px;">' + $datapoint.DistrictName + '</div>'
+	HTML += '</div>'
+	HTML += '<div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">'
+	var percentHC = "#333"
+	var percentCol = "#555"
+	if ($datapoint.PercentChange > 8) {
+		percentHC = "#833333"
+		percentCol = "#855555"
+	}
+	if ($datapoint.PercentChange < -8) {
+		percentHC = "#335333"
+		percentCol = "#556E55"
+	}
+	var rateHC = "#333"
+	var rateCol = "#555"
+	var rateText = "Normal"
+	var rateTextCol = "#fff"
+	if ($datapoint.CVRate > 10) {
+		rateHC = "#833333"
+		rateCol = "#855555"
+		rateText = "Above Normal"
+	}
+	var trendHC = "#333"
+	var trendCol = "#555"
+	var trendText = "Consistent"
+	if ($datapoint.DistrictZscore > 1) {
+		trendHC = "#833333"
+		trendCol = "#855555"
+		trendText = "Increasing"
+	}
+	if ($datapoint.DistrictZscore < -1) {
+		trendHC = "#335333"
+		trendCol = "#556E55"
+		trendText = "Decreasing"
+	}
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: ' + percentHC + '; color:#fff">Change</div>'
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: ' + rateHC + '; color:#fff">Range</div>'
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: ' + trendHC + '; color:#fff">Trend</div>'
+	HTML += '</div>'
+	HTML += '<div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; align-items: auto; align-content: start">'
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: ' + percentCol + '; color:#fff">' + Round($datapoint.PercentChange, 1) + '%</div>'
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: ' + rateCol + '; color:#fff">' + rateText + '</div>'
+	HTML += '<div style="flex: 1 0 auto; margin: 0px; flex-grow: 1; width:calc(33.33% - 10px); padding: 5px; background-color: ' + trendCol + '; color:#fff">' + trendText + '</div>'
+	HTML += '</div>'
+	
+	return HTML
+}
+
+
+return {
+    separatorColor: "transparent",
+      attributes: {districtdisplay: createDistrictStats()}
+
+}
